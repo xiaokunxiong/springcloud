@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: wms-service
+  cloud:
+    config:
+      discovery:
+        # 使用eureka发现配置中心服务
+        enabled: true
+        # 配置中心服务名称
+        serviceId: config-server
+      # 登录用户名和密码
+      username: ${tony_config_server_security_name:tony}
+      password: ${tony_configserver_security_password:12345678}
+      # 覆盖本地配置
+      overrideNone: false
+      failFast: true

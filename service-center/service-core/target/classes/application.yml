@@ -1,0 +1,12 @@
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    # 服务列表缓存更新时间
+    registryFetchIntervalSeconds: 10
+    serviceUrl:
+      defaultZone: ${tony_eureka_serviceUrl:http://127.0.0.1:8761/eureka/}
+  instance:
+    preferIpAddress: true
+    # 心跳间隔
+    leaseRenewalIntervalInSeconds: 10
